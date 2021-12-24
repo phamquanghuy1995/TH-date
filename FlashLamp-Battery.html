@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="battery.js"></script>
+<script src="flashlamp.js"></script>
+<script>
+    let battery = new Battery(10);
+    let flashlamp = new Flashlamp(battery);
+    document.write("Battery info:" + flashlamp.getBatteryInfo() + "<br/>");
+    flashlamp.light();
+    document.write("Turn on<br/>")
+    flashlamp.turOn();
+    flashlamp.light();
+    document.write("Battery info:" + flashlamp.getBatteryInfo()+"<br/>");
+
+    document.write("Turn off<br/>")
+    flashlamp.turOff();
+    flashlamp.light();
+</script>
+</body>
+</html>
